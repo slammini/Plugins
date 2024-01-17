@@ -1,0 +1,39 @@
+openapi: 3.1.0
+info:
+  title: Send Email Plugin
+  description: An Plugin that allows a user the user to send emails
+  version: 'v1'
+servers:
+  - url: http://localhost:4000
+paths:
+  /SendEmail:
+    post:
+      operationId: send_email
+      summary: Sends an email with content specified as input
+      parameters:
+        - name: input
+          in: query
+          description: The content of the email
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SendEmailResponse'
+components:
+  schemas:
+    SendEmailResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: The message sent by the plugin
+        status:
+          type: string
+          description: The status of the email sent
+      
+

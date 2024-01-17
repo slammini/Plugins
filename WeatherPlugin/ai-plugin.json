@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Weather Plugin",
+    "name_for_model": "weather",
+    "description_for_human": "Get the current weather for a specific location.",
+    "description_for_model": "Provide the user with the current or forecasted weather for a specific location. The date should be formatted to yyyy-mm-dd.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:5000/.well-known/openapi.yaml"
+    },
+    "logo_url": "http://localhost:5000/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "http://www.yourdomain.com/legal"
+}

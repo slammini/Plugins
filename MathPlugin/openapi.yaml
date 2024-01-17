@@ -1,0 +1,136 @@
+openapi: 3.0.1
+info:
+  title: Math Plugin
+  description: A plugin that performs basic math operations
+  version: 'v1'
+servers:
+  - url: http://localhost:5001
+paths:
+  /add:
+    get:
+      operationId: add
+      summary: Add two numbers
+      parameters:
+        - name: input
+          in: query
+          description: The first number to add
+          required: true
+          schema:
+            type: number
+            format: float
+        - name: input2
+          in: query
+          description: The second number to add
+          required: true
+          schema:
+            type: number
+            format: float
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/float:
+              schema:
+                type: number
+                format: float
+  /subtract:
+    get:
+      operationId: subtract
+      summary: Subtract two numbers
+      parameters:
+        - name: input
+          in: query
+          description: The first number to subtract from
+          required: true
+          schema:
+            type: number
+            format: float
+        - name: input2
+          in: query
+          description: The second number to subtract
+          required: true
+          schema:
+            type: number
+            format: float
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/float:
+              schema:
+                type: number
+                format: float
+  /multiply:
+    get:
+      operationId: multiply
+      summary: Multiply two numbers
+      parameters:
+        - name: input
+          in: query
+          description: The first number to multiply
+          required: true
+          schema:
+            type: number
+            format: float
+        - name: input2
+          in: query
+          description: The second number to multiply
+          required: true
+          schema:
+            type: number
+            format: float
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/float:
+              schema:
+                type: number
+                format: float
+  /divide:
+    get:
+      operationId: divide
+      summary: Divide two numbers
+      parameters:
+        - name: input
+          in: query
+          description: The first number to divide
+          required: true
+          schema:
+            type: number
+            format: float
+        - name: input2
+          in: query
+          description: The second number to divide
+          required: true
+          schema:
+            type: number
+            format: float
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/float:
+              schema:
+                type: number
+                format: float
+  /squareroot:
+    get:
+      operationId: squareroot
+      summary: Get the square root of a number
+      parameters:
+        - name: input
+          in: query
+          description: The number to get the square root of
+          required: true
+          schema:
+            type: number
+            format: float
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/float:
+              schema:
+                type: number
+                format: float

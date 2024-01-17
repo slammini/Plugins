@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Azure VM Plugin",
+  "name_for_model": "AzureVMPlugin",
+  "description_for_human": "Plugin for interacting with Azure virtual machines (Azure VMs) on Azure. User can list vms or shutdown a vm. Use keywords 'list' or 'shutdown' to prompt the plugin.",
+  "description_for_model": "Plugin for interacting with Azure virtual machines (Azure VMs) on Azure. User can list vms or shutdown a vm. Use keywords 'list' or 'shutdown' to prompt the plugin.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5055/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:5055/logo.png",
+  "contact_email": "support@your-domain.com",
+  "legal_info_url": "https://www.your-domain.com/legal"
+}

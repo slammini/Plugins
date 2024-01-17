@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Mathematical operations",
+  "name_for_model": "MathematicalOperations",
+  "description_for_human": "Plugin to perform mathematical operations such as addition, subtraction, multiplication, division and square root. Use keywords 'add', 'subtract', 'multiply', 'divide' and 'square root' to prompt the plugin.",
+  "description_for_model": "Plugin to perform mathematical operations such as addition, subtraction, multiplication, division and square root. Use keywords 'add', 'subtract', 'multiply', 'divide' and 'square root' to prompt the plugin.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5001/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:5001/logo.png",
+  "contact_email": "support@your-domain.com",
+  "legal_info_url": "https://www.your-domain.com/legal"
+}

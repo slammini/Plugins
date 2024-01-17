@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  title: Weather Plugin
+  description: A plugin that allows the user to get the current weather for a specified location
+  version: 'v1'
+servers:
+  - url: http://localhost:5000
+paths:
+  /weather:
+    get:
+      operationId: getWeather
+      summary: Get the current weather for a specified location. Location is the only input parameter
+      parameters:
+        - name: input
+          in: query
+          description: The location to get the weather for
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getWeatherResponse'
+components:
+  schemas:
+    getWeatherResponse:
+      type: object
+      properties:
+        weather:
+          type: string
+          description: The current weather in the specified location.
+        temperature:
+          type: number
+          description: The current temperature in the specified location.
+        temp_min:
+          type: number
+          description: The minimum temperature in the specified location for the day.
+        temp_max:
+          type: number
+          description: The maximum temperature in the specified location for the day.
+        humidity:
+          type: number
+          description: The humidity in the specified location.
+    

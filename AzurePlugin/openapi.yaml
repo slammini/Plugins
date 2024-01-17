@@ -1,0 +1,47 @@
+openapi: 3.0.1
+info:
+  title: Azure VM Plugin
+  description: A plugin that allows the user to list or shutdown virtual machines on Azure
+  version: 'v1'
+servers:
+  - url: http://localhost:5055
+paths:
+  /returnVMs:
+    get:
+      operationId: getVMs
+      summary: Get the list of Azure virtual machines in a subscription. It will return the running azure virtual machines and the stopped azure virtual machines.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  vms:
+                    type: array
+                    items:
+                      type: string
+  /ShutDownVMs:
+    get:
+      operationId: shutdownVMs
+      summary: Shut down virtual machines on Azure
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+components:
+  schemas:
+    VMsResponse:
+      type: object
+      properties:
+        vms:
+          type: array
+          items:
+            type: string

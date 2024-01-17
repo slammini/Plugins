@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Send Email",
+    "name_for_model": "SendEmail",
+    "description_for_human": "Sends an email with the content specified by the user",
+    "description_for_model": "Sends an email with the content specified by the user",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:4000/.well-known/openapi.yaml"
+    },
+    "logo_url": "http://localhost:4000/logo.png",
+    "contact_email": "support@yourdomain.com",
+    "legal_info_url": "http://www.yourdomain.com/legal"
+}
